@@ -7,7 +7,7 @@ import Breadcrumb from '@/components/app/Breadcrumb.vue'
   <div class="app-layout">
     <Navbar />
     <main class="main-content">
-      <Breadcrumb />
+      <Breadcrumb v-if="$route.path !== '/'" />
       <router-view />
     </main>
   </div>

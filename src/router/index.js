@@ -53,6 +53,18 @@ const routes = [
       },
     ],
   },
+  {
+    path: '/dashboard',
+    component: () => import('@/layouts/DashboardLayout.vue'),
+    children: [
+      {
+        path: '',
+        name: 'dashboard',
+        component: () => import('@/views/Dasboard.vue'),
+        meta: { breadcrumb: 'Dashboard' },
+      },
+    ],
+  },
 ]
 
 const router = createRouter({
@@ -61,3 +73,4 @@ const router = createRouter({
 })
 
 export default router
+

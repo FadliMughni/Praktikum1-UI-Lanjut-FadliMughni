@@ -24,6 +24,7 @@ const menus = computed(() => [
     ],
   },
   { name: appStore.t.nav.contact, path: '/contact' },
+  { name: 'Organizer Dashboard', path: '/dashboard' },
 ])
 
 const toggleLangDropdown = () => {
