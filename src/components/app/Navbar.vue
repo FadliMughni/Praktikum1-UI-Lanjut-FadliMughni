@@ -18,9 +18,9 @@ const menus = computed(() => [
       {
         name: appStore.t.nav.events,
         path: '/browse/events',
-        children: [{ name: appStore.t.nav.eventDetailSample, path: '/browse/events/1' }],
       },
       { name: appStore.t.nav.category, path: '/browse/category' },
+      { name: 'Your Events', path: '/browse/your-events' },
     ],
   },
   { name: appStore.t.nav.contact, path: '/contact' },
