@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import AppLayout from '@/layouts/App.vue'
+import DashboardLayout from '@/layouts/DashboardLayout.vue'
 
 const routes = [
   {
@@ -54,14 +55,19 @@ const routes = [
     ],
   },
   {
+    /* AREA PENYELENGGARA ACARA (DASHBOARD) */
     path: '/dashboard',
-    component: () => import('@/layouts/DashboardLayout.vue'),
+    component: DashboardLayout,
     children: [
       {
         path: '',
-        name: 'dashboard',
-        component: () => import('@/views/Dasboard.vue'),
-        meta: { breadcrumb: 'Dashboard' },
+        name: 'dashboard-overview',
+        component: () => import('@/views/Dashboard.vue'),
+      },
+      {
+        path: 'events',
+        name: 'dashboard-events',
+        component: () => import('@/views/EventManagement.vue'),
       },
     ],
   },
@@ -73,4 +79,3 @@ const router = createRouter({
 })
 
 export default router
-
